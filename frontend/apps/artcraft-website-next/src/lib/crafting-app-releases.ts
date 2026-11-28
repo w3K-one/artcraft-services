@@ -224,7 +224,7 @@ export function craftRelease(
 // every app above, and the /apps pages recommend it first. Its releases ship
 // the same file set minus the macOS CLI, named artcraft-launcher-*.
 export const CRAFT_LAUNCHER_RELEASE: CraftRelease | null = craftRelease(
-  "0.19.2",
+  "0.20.3",
   CRAFT_RELEASE_ASSETS
     .filter((asset) => !asset.file.startsWith("{slug}-cli-"))
     // The launcher's RISC-V binary needs glibc 2.39, including in its tarball.
@@ -240,19 +240,19 @@ export const CRAFT_APP_RELEASES: Record<CraftAppSlug, CraftRelease | null> = {
   vectorcraft: craftRelease("0.24.1"),
   filmcraft: craftRelease("0.20.1"),
   lightcraft: craftRelease("0.21.1"),
-  pdfcraft: craftRelease("0.21.1"),
-  effectcraft: craftRelease("0.24.1"),
+  pdfcraft: craftRelease("0.22.0"),
+  effectcraft: craftRelease("0.25.1"),
   // AniCraft publishes no web ZIP build yet.
-  anicraft: craftRelease("0.2.1", CRAFT_RELEASE_ASSETS.filter(
+  anicraft: craftRelease("0.3.0", CRAFT_RELEASE_ASSETS.filter(
     (asset) => !asset.file.startsWith("{slug}-web-"),
   )),
-  designcraft: craftRelease("0.20.1"),
+  designcraft: craftRelease("0.21.1"),
   figcraft: craftRelease("0.18.1"),
   texturecraft: craftRelease("0.6.1"),
   materialcraft: craftRelease("0.4.1"),
-  wordcraft: craftRelease("0.18.1"),
+  wordcraft: craftRelease("0.19.1"),
   soundcraft: craftRelease("0.20.1"),
-  deckcraft: craftRelease("0.18.1"),
+  deckcraft: craftRelease("0.19.1"),
   cadcraft: craftRelease("0.20.1"),
   gridcraft: craftRelease("0.19.1"),
   "craft-anything": craftRelease("0.6.1"),
